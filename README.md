@@ -1,4 +1,4 @@
-# 分散計算フレームワークRayによる分散型強化学習実装の試み (Distributed Experience Replay with Ray)
+# 分散計算フレームワークRayによる分散型強化学習実装の試み Distributed Experience Replay with Ray
 
 分散型経験リプレイ (distributed experience replay) を使ったシンプルな分散型強化学習の Ray による実装です。
 
