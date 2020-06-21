@@ -1,5 +1,4 @@
-# 分散計算フレームワークRayによる分散型強化学習実装の試み
-# Distributed Experience Replay with Ray
+# 分散計算フレームワークRayによる分散型強化学習実装の試み (Distributed Experience Replay with Ray)
 
 分散型経験リプレイ (distributed experience replay) を使ったシンプルな分散型強化学習の Ray による実装です。
 
@@ -53,13 +52,13 @@ https://docs.ray.io/en/master/autoscaling.html#aws
 
 ### AWS 側の設定
 
-* IAMコンソールでユーザ追加
-** 「アクセスの種類」を「プログラムによるアクセス」→アクセスキーIDとシークレットアクセスキーが生成
-** 「既存のポリシーを直接アタッチ」で「**AmazonEC2FullAccess**」と「**IAMFullAccess**」を追加
-** アクセスキーIDとシークレットアクセスキーが作成できたらローカルマシンの ~/.aws/credentials に保存
-* **ポリシーの部分は要検討**
-** Rayのドキュメントにはどのポリシーが必要か具体的には書いてない(or 私が見つけられなかった)ので、各自で適切なポリシーを設定してください
-** 私の場合は、実験直前にユーザを作成して実験が終わったらすぐユーザを削除しています
+- IAMコンソールでユーザ追加
+  - 「アクセスの種類」を「プログラムによるアクセス」→アクセスキーIDとシークレットアクセスキーが生成
+  - 「既存のポリシーを直接アタッチ」で「**AmazonEC2FullAccess**」と「**IAMFullAccess**」を追加
+- アクセスキーIDとシークレットアクセスキーが作成できたらローカルマシンの ~/.aws/credentials に保存
+- **ポリシーの部分は要検討**
+  - Rayのドキュメントにはどのポリシーが必要か具体的には書いてない(or 私が見つけられなかった)ので、各自で適切なポリシーを設定してください
+  - 私の場合は、実験直前にユーザを作成して実験が終わったらすぐユーザを削除しています
 
 
 
@@ -159,21 +158,21 @@ https://console.aws.amazon.com/
 
 **クラスタ自動構築時に作成されるもの(私が確認できた範囲)を削除**
 
-* EC2
-** **インスタンス**
-*** デフォルトyaml設定では ray downしてもインスタンスが「停止」されるだけなので実験が終わったら手動で「終了」する
-*** yaml 設定で 「cache_stopped_nodes: False」を指定すると ray down時に「停止」ではなく「終了」するようになる
-** **ボリューム**
-*** インスタンス開始とともに作成され、終了で削除されるはず
-** キーペア
-*** ray-autoscaler*
-** セキュリティグループ
-*** ray-autoscaler*
-* IAM
-** ロール
-*** ray-autoscaler-v1
-* ssh 秘密鍵
-** ~/.ssh/ray-autoscaler*.pem
+- EC2
+  - **インスタンス**
+    - デフォルトyaml設定では ray downしてもインスタンスが「停止」されるだけなので実験が終わったら手動で「終了」する
+    - yaml 設定で 「cache_stopped_nodes: False」を指定すると ray down時に「停止」ではなく「終了」するようになる
+  - **ボリューム**
+    - インスタンス開始とともに作成され、終了で削除されるはず
+  - キーペア
+    - ray-autoscaler*
+  - セキュリティグループ
+    - ray-autoscaler*
+  - IAM
+    - ロール
+      - ray-autoscaler-v1
+  - ssh 秘密鍵
+    - ~/.ssh/ray-autoscaler*.pem
 
 **IAMコンソールで自分で作ったユーザも削除**
 
