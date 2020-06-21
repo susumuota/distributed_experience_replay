@@ -66,7 +66,7 @@ https://docs.ray.io/en/master/autoscaling.html#aws
 
 今回実験に使用した設定ファイルはこちらです。
 
-https://github.com/susumuota/distributed_experience_replay/example-full.yaml
+https://github.com/susumuota/distributed_experience_replay/blob/master/example-full.yaml
 
 元ファイルは以下にあります。
 
@@ -145,7 +145,7 @@ ray down example-full.yaml
 ```
 
 
-## AWSコンソールでクラスタの様子を確認
+### AWSコンソールでクラスタの様子を確認
 
 https://console.aws.amazon.com/
 
