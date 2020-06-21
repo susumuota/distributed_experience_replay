@@ -1,0 +1,7 @@
+numpy
+requests
+tensorflow==1.15
+keras==2.2.4
+gym[atari]
+ray[rllib]
+boto3
