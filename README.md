@@ -5,6 +5,15 @@
 Ape-X[1] の Actor / Learner アーキテクチャによる経験の生成と学習の分離と、ε_i グリーディを実装しています(それ以外は実装していません)。
 
 
+このソースコード/設定ファイルは以下の勉強会のために準備したものです。
+
+https://do2dle.connpass.com/event/178184/
+
+また、勉強会当日の発表資料は以下にあります。
+
+[![thumbnail](https://image.slidesharecdn.com/distributedrlota20200622-200622061616/95/slide-1-1024.jpg)](https://www.slideshare.net/SusumuOTA/distributed-rl-ota-20200622)
+
+
 ## インストール
 
 テスト環境は macOS 10.15.5 + Python 3.7.7 です。
@@ -56,7 +65,7 @@ https://docs.ray.io/en/master/autoscaling.html#aws
   - 「アクセスの種類」を「プログラムによるアクセス」→アクセスキーIDとシークレットアクセスキーが生成
   - 「既存のポリシーを直接アタッチ」で「**AmazonEC2FullAccess**」と「**IAMFullAccess**」を追加
 - アクセスキーIDとシークレットアクセスキーが作成できたらローカルマシンの ~/.aws/credentials に保存
-- **ポリシーの部分は要検討**
+- ポリシーの部分は **要検討**
   - Rayのドキュメントにはどのポリシーが必要か具体的には書いてない(or 私が見つけられなかった)ので、各自で適切なポリシーを設定してください
   - 私の場合は、実験直前にユーザを作成して実験が終わったらすぐユーザを削除しています
 
