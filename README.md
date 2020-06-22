@@ -11,6 +11,8 @@ https://do2dle.connpass.com/event/178184/
 
 また、勉強会当日の発表資料は以下にあります。
 
+https://www.slideshare.net/SusumuOTA/distributed-rl-ota-20200622
+
 [![thumbnail](https://image.slidesharecdn.com/distributedrlota20200622-200622061616/95/slide-1-1024.jpg)](https://www.slideshare.net/SusumuOTA/distributed-rl-ota-20200622)
 
 
