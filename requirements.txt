@@ -1,6 +1,6 @@
 numpy
 requests
-tensorflow==2.11.1
+tensorflow==2.12.1
 keras==2.2.4
 gym[atari]
 ray[rllib]
